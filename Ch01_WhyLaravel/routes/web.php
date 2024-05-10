@@ -19,3 +19,8 @@ Route::get('/greeting-create', function () {
     $greeting->save();
     return 'Greeting created';
 });
+
+Route::get('/greeting-read', function () {
+    $greeting = Greeting::first();
+    return $greeting->body;
+});

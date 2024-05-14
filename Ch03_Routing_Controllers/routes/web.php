@@ -13,3 +13,7 @@ Route::get('about', function () {
 Route::get('users/{id}', function ($id) {
     return 'User '.$id;
 });
+
+Route::get('users/{id}/{name}', function ($id, $name) {
+    return view('users', ['id' => $id, 'name' => $name]);
+});

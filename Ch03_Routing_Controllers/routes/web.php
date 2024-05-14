@@ -17,3 +17,7 @@ Route::get('users/{id}', function ($id) {
 Route::get('users/{id}/{name}', function ($id, $name) {
     return view('users', ['id' => $id, 'name' => $name]);
 });
+
+Route::get('product/{id}', function ($id) {
+    return 'Product '.$id;
+})->where('id', '[0-9]+');

@@ -21,3 +21,13 @@ Route::get('users/{id}/{name}', function ($id, $name) {
 Route::get('product/{id}', function ($id) {
     return 'Product '.$id;
 })->where('id', '[0-9]+');
+
+Route::group([], function() {
+    Route::get('hello', function() {
+        return 'Hello';
+    });
+
+    Route::get('world', function() {
+        return 'world';
+    });
+});

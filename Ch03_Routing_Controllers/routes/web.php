@@ -52,7 +52,7 @@ Route::name('usuarios.')->prefix('usuarios')->group(function() {
     });
 });
 
-Route::controller(TreeController::class)->group(function() {
-    Route::get('tree', 'index');
-    Route::get('tree/{id}', 'show');
+Route::controller(TreeController::class)->prefix('tree')->group(function() {
+    Route::get('/', 'index');
+    Route::get('{id}', 'show');
 });

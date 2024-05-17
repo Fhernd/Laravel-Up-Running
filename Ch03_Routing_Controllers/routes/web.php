@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TreeController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -48,4 +50,9 @@ Route::name('usuarios.')->prefix('usuarios')->group(function() {
             return ['C1', 'C2', 'C3'];
         })->name('show');
     });
+});
+
+Route::controller(TreeController::class)->group(function() {
+    Route::get('tree', 'index');
+    Route::get('tree/{id}', 'show');
 });

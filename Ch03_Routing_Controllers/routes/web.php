@@ -31,3 +31,13 @@ Route::group([], function() {
         return 'world';
     });
 });
+
+Route::prefix('dashboard')->group(function() {
+    Route::get('/', function() {
+        return 'Dashboard - Home';
+    });
+
+    Route::get('users', function() {
+        return 'Dashboard - Users';
+    });
+});

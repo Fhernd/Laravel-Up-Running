@@ -42,7 +42,7 @@ Route::prefix('dashboard')->group(function() {
     });
 });
 
-Route::name('users.')->prefix('users')->group(function() {
+Route::name('usuarios.')->prefix('usuarios')->group(function() {
     Route::name('comments.')->prefix('comments')->group(function() {
         Route::get('{id}', function() {
             return ['C1', 'C2', 'C3'];

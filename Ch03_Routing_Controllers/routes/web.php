@@ -56,3 +56,7 @@ Route::controller(TreeController::class)->prefix('tree')->group(function() {
     Route::get('/', 'index');
     Route::get('{id}', 'show');
 });
+
+Route::fallback(function () {
+    return response()->json(['message' => 'Not Found!!!'], 404);
+});

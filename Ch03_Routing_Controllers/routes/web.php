@@ -62,5 +62,5 @@ Route::fallback(function () {
 });
 
 Route::get('home', function () {
-    return view('home');
-})->name('home')->with('message', 'Welcome to the home page!');
+    return view('home')->with('message', 'Welcome to the home page!');
+})->name('home');

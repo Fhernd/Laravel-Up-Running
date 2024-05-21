@@ -60,3 +60,7 @@ Route::controller(TreeController::class)->prefix('tree')->group(function() {
 Route::fallback(function () {
     return response()->json(['message' => 'Not Found!!!'], 404);
 });
+
+Route::get('home', function () {
+    return view('home');
+})->name('home')->with('message', 'Welcome to the home page!');

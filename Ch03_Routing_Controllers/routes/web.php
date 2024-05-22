@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\TreeController;
+use App\Http\Controllers\TaskController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -64,3 +66,6 @@ Route::fallback(function () {
 Route::get('home', function () {
     return view('home')->with('message', 'Welcome to the home page!');
 })->name('home');
+
+
+Route::get('/tasks',[TaskController::class, 'index']);

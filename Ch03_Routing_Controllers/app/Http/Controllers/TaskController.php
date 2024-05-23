@@ -10,4 +10,14 @@ class TaskController extends Controller
     {
         return 'Hello from TaskController@index';
     }
+
+    public function show(string $id)
+    {
+        return 'Task '.$id;
+    }
+
+    public function create()
+    {
+        return view('tasks.create');
+    }
 }

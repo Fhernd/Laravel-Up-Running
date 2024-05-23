@@ -38,4 +38,11 @@ class TaskController extends Controller
 
         return redirect()->route('tasks.index')->with('success', 'Task created successfully.');
     }
+
+    public function edit(string $id)
+    {
+        $task = Task::find($id);
+
+        return view('tasks.edit', compact('task'));
+    }
 }

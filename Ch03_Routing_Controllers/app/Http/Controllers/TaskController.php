@@ -24,4 +24,16 @@ class TaskController extends Controller
     {
         return view('tasks.create');
     }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+
+        Task::create($request->all());
+
+        return redirect()->route('tasks.index')->with('success', 'Task created successfully.');
+    }
 }

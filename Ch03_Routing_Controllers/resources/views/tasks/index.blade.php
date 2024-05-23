@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Tasks</h1>
-    <a href="{{ route('task.create') }}">Create Task</a>
+    <a href="{{ route('tasks.create') }}">Create Task</a>
     @if ($message = Session::get('success'))
         <div>
             <strong>{{ $message }}</strong>

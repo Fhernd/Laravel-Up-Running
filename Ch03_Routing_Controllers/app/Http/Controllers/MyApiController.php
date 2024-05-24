@@ -11,7 +11,7 @@ class MyApiController extends Controller
      */
     public function index()
     {
-        //
+        return 'MyApiController@index';
     }
 
     /**
@@ -19,7 +19,7 @@ class MyApiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'MyApiController@store';
     }
 
     /**
@@ -27,7 +27,7 @@ class MyApiController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return 'MyApiController@show';
     }
 
     /**
@@ -35,7 +35,7 @@ class MyApiController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return 'MyApiController@update';
     }
 
     /**
@@ -43,6 +43,6 @@ class MyApiController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return 'MyApiController@destroy';
     }
 }

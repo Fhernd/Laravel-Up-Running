@@ -11,7 +11,7 @@ class MySampleResourceController extends Controller
      */
     public function index()
     {
-        //
+        return 'MySampleResourceController@index';
     }
 
     /**
@@ -19,7 +19,7 @@ class MySampleResourceController extends Controller
      */
     public function create()
     {
-        //
+        return 'MySampleResourceController@create';
     }
 
     /**
@@ -27,7 +27,7 @@ class MySampleResourceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'MySampleResourceController@store';
     }
 
     /**
@@ -35,7 +35,7 @@ class MySampleResourceController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return 'MySampleResourceController@show';
     }
 
     /**
@@ -43,7 +43,7 @@ class MySampleResourceController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return 'MySampleResourceController@edit';
     }
 
     /**
@@ -51,7 +51,7 @@ class MySampleResourceController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return 'MySampleResourceController@update';
     }
 
     /**
@@ -59,6 +59,6 @@ class MySampleResourceController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return 'MySampleResourceController@destroy';
     }
 }

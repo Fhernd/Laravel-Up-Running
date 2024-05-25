@@ -6,7 +6,7 @@ use App\Http\Controllers\MyApiController;
 use App\Http\Controllers\TreeController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\MySampleResourceController;
-
+use App\Models\Task;
 
 Route::get('/', function () {
     return view('welcome');
@@ -81,3 +81,7 @@ Route::delete('/tasks/{id}', [ TaskController::class, 'destroy'])->name('tasks.d
 Route::resource('mysample', MySampleResourceController::class);
 
 Route::apiResource('myapi', MyApiController::class);
+
+Route::get('task/single/{task}', function (Task $task) {
+    return view('tasks.showsingle')->with('task', $task);
+});

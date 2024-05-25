@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MyApiController;
 use App\Http\Controllers\TreeController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\MySampleResourceController;
@@ -78,3 +79,5 @@ Route::put('/tasks/{id}', [ TaskController::class, 'update'])->name('tasks.updat
 Route::delete('/tasks/{id}', [ TaskController::class, 'destroy'])->name('tasks.destroy');
 
 Route::resource('mysample', MySampleResourceController::class);
+
+Route::apiResource('myapi', MyApiController::class);

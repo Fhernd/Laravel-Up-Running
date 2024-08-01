@@ -17,7 +17,8 @@ class ContactFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => 'John Doe',
+            'email' => 'john@mail.co'
         ];
     }
 }

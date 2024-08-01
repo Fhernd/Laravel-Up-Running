@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Contact;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,6 +10,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class ContactFactory extends Factory
 {
+    protected $model = Contact::class;
+    
     /**
      * Define the model's default state.
      *
@@ -17,8 +20,8 @@ class ContactFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => 'John Doe',
-            'email' => 'john@mail.co'
+            'name' => fake()->name,
+            'email' => fake()->email()
         ];
     }
 }
